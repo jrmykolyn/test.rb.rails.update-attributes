@@ -4,7 +4,7 @@
 
     <article class="item-wrap">
     <h2 class="item-title"><%= item.name %></h2>
-    <%= form_for( item ) do | f | %>
+    <%= form_for( item, { :html => { "data-item-name" => item.name } } ) do | f | %>
         <%= f.check_box :preferred %>
     <% end %>
     </article>
